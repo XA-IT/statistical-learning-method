@@ -18,5 +18,11 @@ C++ reappearance
 结构风险（structural risk minimization）: $R_{srm}(f) = 1/N\sum_{i=1}^NL(y_i, f(x_i))+\lambdaJ(f)$  
 结构风险最小化=正则化（regularization），相当于加上$\lambdaJ(f)$正则化项（惩罚项），代表模型的复杂度，模型越复杂，J(f)越大。  
 例如，最大后验概率估计(maximum posterior probability)：模型是条件概率分布，损失函数是对数损失函数，模型复杂度由模型的先验概率表示。  
+训练误差的大小，可以判断给定的问题是不是一个容易学习的问题。测试误差反映了学习方法对未知的测试数据集的预测能力（泛化能力，generalization ability.  
+\*最小二乘法
+交叉验证：将数据集随机分为三部分，训练集，验证集，测试集。  
+泛化误差：$R_{emp}(\hat{f}) = E_p[L(Y, \hat{f}(X))] = \int_{XxY}L(y, \hat{f}(x))P(x, y)dxdy$  
+本质上是学习到的模型的期望风险。  
+\*泛化误差上界的证明
 
 
