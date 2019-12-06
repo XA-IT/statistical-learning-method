@@ -45,9 +45,9 @@ Bayes学习 根据BAYES定理计算后验概率 $p(\theta|D) = \frac{p(\theta)P(
 
 期望风险无法计算，因为不知道联合分布  
 监督学习两个基本策略： 经验风险最小化（ERM）和结构风险最小化（SRM）  
-经验风险最小化：$min_{f\in F} \frac{1}{N \sum_{i=1}^{N}L(y_i, f(x_i))}$  
+经验风险最小化：$min_{f\in F} \frac{1}{N} \sum_{i=1}^{N}L(y_i, f(x_i))$  
 样本容量少会过拟合，为防止过拟合，用结构风险最小化  
-结构风险最小化：$min_{f\in F} \frac{1}{N \sum_{i=1}^{N}L(y_i, f(x_i))} +  \lambda J(f)$ 惩罚复杂模型  
+结构风险最小化：$min_{f\in F} \frac{1}{N} \sum_{i=1}^{N}L(y_i, f(x_i)) +  \lambda J(f)$ 惩罚复杂模型  
 
 最大似然估计？  
 最大后验概率估计？  
