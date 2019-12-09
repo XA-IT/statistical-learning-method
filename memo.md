@@ -62,7 +62,12 @@ Bayes学习 根据BAYES定理计算后验概率 $p(\theta|D) = \frac{p(\theta)P(
 
 泛化能力：用测试集误差评估模型的泛化方法  
 泛化误差本质上是所学习模型的期望风险
-$R_{exp}(\hat{f})=E_{P}[L(Y,\hat{f}(X))] = \int_{\vatchi \times \upsilon}L(y,\hat{f}(x))P(x,y)dxdy$
+$R_{exp}(\hat{f})=E_{P}[L(Y,\hat{f}(X))] = \int_{\varchi \times \upsilon}L(y,\hat{f}(x))P(x,y)dxdy$
+
+泛化误差上界  
+对二分类问题，当假设空间是有限个函数的集合$\mathcal{F}={f_1,f_2,f_3,\dots,f_d}$时，对随意一个函数$f\in\mathcal{F}$,至少以概率$1-\delta 0<\delta < 1$,以下不等式成立：  
+$R(f)\leq\hat{R}(f) + \epsilon(d,N,\delta)$  
+$\epsilon(d,N,\delta) = \sqrt{\frac{1}{2N}(\log d + \log \frac{1}{\delta})}$
 
 
 
